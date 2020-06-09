@@ -1,0 +1,36 @@
+/*Some styles for dashboard for this application*/
+.dashboard{
+    background-color: burlywood;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+.userCard{
+    display: block;
+}
+.userCard img{
+    height: 100px;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+.headerText{
+    margin-left: 20px;
+    color: #000;
+    line-height: 15px;
+}
+
+.cardHeader{
+    display: flex;
+    margin-bottom: 10px;
+}
+.cardFooter{
+    display: inline-block;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 10px;
+}

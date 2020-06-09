@@ -1,0 +1,12 @@
+/*CSS for App.css*/
+div.home{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.homeText{
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+}

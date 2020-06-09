@@ -1,15 +1,18 @@
 /*The CSSModule for Error Highlighting*/
 .form{
-    background-color: rgba(0, 0, 0, 0.541);
+    /* background-color: rgba(0, 0, 0, 0.541); */
+    background-color: burlywood;
     overflow: hidden;
     position: absolute;
     padding: 20px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 400px;
+    color: #000;
 }
 
+/*Forms*/
 input[type="text"], input[type="email"], input[type="password"], textarea, select{
     width: 100%;
     font-size: 18px;
@@ -24,19 +27,4 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     word-spacing: 1px;
     margin-bottom: 10px;
     margin-top: 5px;
-}
-
-button[type="submit"]{
-    width: 100%;
-    font-size: 20px;
-    margin-top: 10px;
-    background-color: red;
-    outline: 0;
-    border: 0;
-    padding: 10px;
-    color: #fff;
-    letter-spacing: 2px;
-}
-button[type="submit"]:active{
-    background: brown;
 }
