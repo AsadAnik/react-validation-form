@@ -34,3 +34,70 @@
     font-size: 11px;
     border-radius: 10px;
 }
+
+/*Global Components*/
+hr{
+    background: white;
+    width: 90%;
+    opacity: 50%;
+}
+
+/*The Dashboard Form*/
+.dashboardForm{
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+}
+
+/*The Posting area*/
+.post{
+    border-bottom: 1px solid gray;
+}
+.postHeadText{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    color: gray;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.postHeader{
+    line-height: 8px;
+    margin-top: 4%;
+    font-family: monospace;
+    font-weight: bold;
+    color: darkslategray;
+}
+.postHeader h2{
+    font-family: fantasy;
+    font-size: 25px;
+    padding: 0 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: initial;
+}
+.postHeader p{
+    font-size: 12px;
+}
+
+.headerBody{ color: #000; }
+.headerTitle{ text-transform: lowercase; }
+
+.postBody h3{
+    display: initial;
+    background-color: #fff;
+    padding: 5px;
+    width: auto;
+    border-radius: 10px;
+    color: darkslategray;
+    font-family: monospace;
+    font-size: 18px;
+}
+.postBody p{
+    color: darkslategray;
+}
+

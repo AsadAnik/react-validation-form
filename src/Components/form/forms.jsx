@@ -80,6 +80,7 @@ const Form = ({ formData, change }) => {
         let input = inputData.settings;
         let output = null;
 
+     ///Makes Area over switch case...   
         switch (input.elements) {
             case "input":
                 output = (
@@ -124,8 +125,8 @@ const Form = ({ formData, change }) => {
                             onBlur={(event) => { changeHandler(event, inputData.id, true) }}
                         >
                             {input.config.options.map((option, i) => (
-                                <option key={i} value={option.val}>
-                                    {option.age}
+                                <option key={i} value={option.item}>
+                                    {option.item}
                                 </option>
                             ))}
                         </select>
@@ -141,7 +142,7 @@ const Form = ({ formData, change }) => {
         return output;
     }
 
-    //Final Return Statement..   
+ //Final Return Statement..   
     return (
         <>
             {formRendering()}

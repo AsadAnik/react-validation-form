@@ -69,38 +69,41 @@ class App extends Component {
                 touched: false,
                 validationMessage: '',
             },
-            password: {
+            phone: {
                 elements: 'input',
                 label: true,
-                labelText: 'Password',
+                labelText: 'Mobile Number',
                 value: '',
 
                 config: {
-                    name: 'pass_input',
-                    type: 'password',
-                    placeholder: 'Type Password'
+                    name: 'number_input',
+                    type: 'number',
+                    placeholder: 'Mobile Number..'
                 },
 
                 validation: {
                     required: true,
-                    minLen: 8,
+                    minLen: 10,
                 },
                 valid: false,
                 touched: false,
                 validationMessage: '',
             },
-            repass: {
-                elements: 'input',
+            gender: {
+                elements: 'select',
                 label: true,
-                labelText: 'Re Type Password',
+                labelText: 'Gender',
                 value: '',
 
                 config: {
-                    name: 'repass_input',
-                    type: 'password',
-                    placeholder: 'ReType Password'
+                    name: 'gender_input',
+                    options: [
+                        { val: '0', item: 'Gender' },
+                        { val: '1', item: 'Male' },
+                        { val: '2', item: 'Female' },
+                        { val: '3', item: 'Other' },
+                    ]
                 },
-
                 validation: {
                     required: true
                 },
@@ -108,15 +111,35 @@ class App extends Component {
                 touched: false,
                 validationMessage: '',
             },
-            bio: {
+            title: {
+                elements: 'input',
+                label: true,
+                labelText: 'Post Title',
+                value: '',
+
+                config: {
+                    name: 'fname_input',
+                    type: 'text',
+                    placeholder: 'Title..'
+                },
+
+                validation: {
+                    required: true,
+                    minLen: 5,
+                },
+                valid: false,
+                touched: false,
+                validationMessage: '',
+            },
+            post: {
                 elements: 'textarea',
                 label: true,
-                labelText: 'Bio..',
+                labelText: 'Post Article..',
                 value: '',
 
                 config: {
                     name: 'textarea_input',
-                    placeholder: 'Write Bio...',
+                    placeholder: 'Write Your Post...',
                     rows: 4,
                     cols: 25
                 },
@@ -129,7 +152,7 @@ class App extends Component {
                 touched: false,
                 validationMessage: '',
             },
-            select: {
+            age: {
                 elements: 'select',
                 label: true,
                 labelText: 'Age',
@@ -138,11 +161,11 @@ class App extends Component {
                 config: {
                     name: 'select_input',
                     options: [
-                        { val: '0', age: 'AGE' },
-                        { val: '1', age: '10-20' },
-                        { val: '2', age: '20-30' },
-                        { val: '3', age: '30-40' },
-                        { val: '4', age: '40+' }
+                        { val: '0', item: 'AGE' },
+                        { val: '1', item: '10-15' },
+                        { val: '2', item: '16-20' },
+                        { val: '3', item: '21-25' },
+                        { val: '4', item: '25+' }
                     ]
                 },
                 validation: {
@@ -178,6 +201,7 @@ class App extends Component {
         for (let key in this.state.formData) {
             validData = this.state.formData[key].valid && validData;
         }
+        
         //Checking full state if valid then access for data in console...   
         if (validData) {
             alert('Successfully Collected Your Informations!')
@@ -202,7 +226,7 @@ class App extends Component {
                         change={(newState) => this.updateState(newState)}
                         changeWithBlur={(newState) => this.updateState(newState)}
                     />
-                   <Button type='submit' value='submit' />
+                   <Button type='submit' value='post' />
                 </form>
             </>
         )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './App.css';
-import Route from './Route';
+import Routes from './Route';
 import Button from './widgets/widgets';
 
 //Firebase imports for logout user...
@@ -34,8 +34,8 @@ const App = (props) => {
                     <Button type='dashboard' value='dashboard' />
                 </Link>
 
-                <Link to='/signup'>
-                    <Button type='signup' value='signup' />
+                <Link to='/post'>
+                    <Button type='post' value='create post' />
                 </Link>
 
                 {status ?
@@ -45,7 +45,8 @@ const App = (props) => {
                     :
                     <Button type='logout' value='logout' click={ logoutUser } />
                 }
-                <Route {...props} />
+
+                <Routes {...props} />
             </div>
         </Router>
     );

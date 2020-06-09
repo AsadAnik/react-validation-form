@@ -40,7 +40,7 @@ const Widgets = ({ type, click, value }) => {
                 )
                 break;
 
-            case "signup":
+            case "post":
                 getBtn = (
                     <button
                         className={Styles.signupBtn}
@@ -78,6 +78,7 @@ const Widgets = ({ type, click, value }) => {
         return getBtn;
     }
 
+ ///Final Returning Statement..   
     return (
         <>
             {getWidgets(type)}
